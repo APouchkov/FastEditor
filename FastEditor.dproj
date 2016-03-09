@@ -1,0 +1,177 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{378BE061-5009-4ECE-BB5E-04385F2832E7}</ProjectGuid>
+        <ProjectVersion>14.4</ProjectVersion>
+        <FrameworkType>VCL</FrameworkType>
+        <MainSource>FastEditor.dpr</MainSource>
+        <Base>True</Base>
+        <Config Condition="'$(Config)'==''">Release</Config>
+        <Platform Condition="'$(Platform)'==''">Win32</Platform>
+        <TargetedPlatforms>1</TargetedPlatforms>
+        <AppType>Application</AppType>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Base)'=='true') or '$(Base_Win32)'!=''">
+        <Base_Win32>true</Base_Win32>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win64' and '$(Base)'=='true') or '$(Base_Win64)'!=''">
+        <Base_Win64>true</Base_Win64>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_1)'!=''">
+        <Cfg_1>true</Cfg_1>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Cfg_1)'=='true') or '$(Cfg_1_Win32)'!=''">
+        <Cfg_1_Win32>true</Cfg_1_Win32>
+        <CfgParent>Cfg_1</CfgParent>
+        <Cfg_1>true</Cfg_1>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_2)'!=''">
+        <Cfg_2>true</Cfg_2>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Cfg_2)'=='true') or '$(Cfg_2_Win32)'!=''">
+        <Cfg_2_Win32>true</Cfg_2_Win32>
+        <CfgParent>Cfg_2</CfgParent>
+        <Cfg_2>true</Cfg_2>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base)'!=''">
+        <DCC_SYMBOL_PLATFORM>false</DCC_SYMBOL_PLATFORM>
+        <DCC_UNIT_PLATFORM>false</DCC_UNIT_PLATFORM>
+        <Manifest_File>None</Manifest_File>
+        <VerInfo_Locale>1049</VerInfo_Locale>
+        <DCC_UNSUPPORTED_CONSTRUCT>false</DCC_UNSUPPORTED_CONSTRUCT>
+        <VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+        <Icon_MainIcon>$(BDS)\bin\delphi_PROJECTICON.ico</Icon_MainIcon>
+        <DCC_Namespace>System;Xml;Data;Datasnap;Web;Soap;Vcl;Vcl.Imaging;Vcl.Touch;Vcl.Samples;Vcl.Shell;$(DCC_Namespace)</DCC_Namespace>
+        <DCC_DcuOutput>.\$(Platform)\$(Config)</DCC_DcuOutput>
+        <DCC_ExeOutput>.\$(Platform)\$(Config)</DCC_ExeOutput>
+        <DCC_E>false</DCC_E>
+        <DCC_N>false</DCC_N>
+        <DCC_S>false</DCC_S>
+        <DCC_F>false</DCC_F>
+        <DCC_K>false</DCC_K>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base_Win32)'!=''">
+        <Manifest_File>$(BDS)\bin\default_app.manifest</Manifest_File>
+        <DCC_Namespace>Winapi;System.Win;Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;Bde;$(DCC_Namespace)</DCC_Namespace>
+        <DCC_UsePackage>IndyIPClient;cxPivotGridChartRS17;cxTreeListdxBarPopupMenuRS17;FlexCel_Core;dac170;DBXSqliteDriver;dxCoreRS17;dxThemeRS17;cxPageControldxBarPopupMenuRS17;fmx;IndySystem;BaseAccountPanel17;TeeDB;BaseReportTabControl17;vclib;inetdbbde;DBXInterBaseDriver;DataSnapClient;DataSnapCommon;DataSnapServer;SeparatorPanel17;dbfprovider170;cxStaticLabel17;DataSnapProviderClient;VCL_FlexCel_Components_DESIGN;DBXSybaseASEDriver;dxRibbonRS17;DbxCommonDriver;VCL_FlexCel_Components;vclimg;cxDataRS17;dxServerModeRS17;dbxcds;cxBarEditItemRS17;DatasnapConnectorsFreePascal;MetropolisUILiveTile;ReportFilterList17;SBaseDataModuleD17;cxPivotGridOLAPRS17;vcldb;cxExportRS17;ibprovider170;vcldsnap;dxBarExtItemsRS17;dacvcl170;cxVerticalGridRS17;dxGDIPlusRS17;cxMultiFieldsDBDataBinding17;dxMDBarButton17;DBXDb2Driver;dxNavBarRS17;DBXOracleDriver;CustomIPTransport;db2provider170;cxLibraryRS17;cxGridRS17;vclribbon;dsnap;IndyIPServer;dhandler17;unidac170;fmxase;vcl;IndyCore;UniversalUtilsD17;IndyIPCommon;CloudService;DBXMSSQLDriver;FmxTeeUI;CodeSiteExpressPkg;FMX_FlexCel_Core;frxDB17;cxImageLookupComboBox17;oraprovider170;cxLookupTreeComboBox17;dxItemPropStorage17;inetdbxpress;webdsnap;FMX_FlexCel_Components_DESIGN;dxWizardControlRS17;unidacfmx170;adortl;DBPeriodicTabControl17;NamedVariablesD17;fs17;frx17;dxtrmdRS17;frxTee17;bindcompfmx;vcldbx;fsTee17;XlsxAdapterXE3;rtl;dbrtl;DbxClientDriver;dxTabbedMDIRS17;bindcomp;inetdb;odbcprovider170;liteprovider170;dxBarRS17;WordReport17;Tee;dxComnRS17;dxdbtrRS17;DBXOdbcDriver;dxBarDBNavRS17;FlexCel_Render;xmlrtl;svnui;ibxpress;dxorgcRS17;cxUserCheckBox17;FieldDataLinkD17;LayoutPanel17;IndyProtocols;DBXMySQLDriver;dxLayoutControlRS17;cxFileEdit17;dxDockingRS17;vclactnband;bindengine;soaprtl;bindcompdbx;FMXTee;TeeUI;bindcompvcl;fsADO17;VCL_FlexCel_Core;FlexCel_Pdf;vclie;frxADO17;dxBarExtDBItemsRS17;FMX_FlexCel_Components;cxPageControlRS17;vcltouch;cxCheckLookupComboBox17;websnap;pgprovider170;dxTileControlRS17;VclSmp;dxmdsRS17;DBXInformixDriver;adsprovider170;cxPivotGridRS17;BackOfficeAccountPanel17;cxMDRadioGroup17;DataSnapConnectors;dxdborRS17;FlexCelXE3;dsnapcon;DBXFirebirdDriver;inet;dacfmx170;fmxobj;fsDB17;accessprovider170;cxTreeListRS17;unidacvcl170;vclx;frxe17;cxEditorsRS17;svn;DBXSybaseASADriver;aseprovider170;fmxdae;FlexCel_XlsAdapter;bdertl;crcontrols170;dbexpress;DataSnapIndy10ServerTransport;myprovider170;$(DCC_UsePackage)</DCC_UsePackage>
+        <VerInfo_Locale>1033</VerInfo_Locale>
+        <VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base_Win64)'!=''">
+        <DCC_UsePackage>IndyIPClient;cxPivotGridChartRS17;cxTreeListdxBarPopupMenuRS17;FlexCel_Core;dac170;DBXSqliteDriver;dxCoreRS17;dxThemeRS17;cxPageControldxBarPopupMenuRS17;fmx;IndySystem;TeeDB;vclib;DBXInterBaseDriver;DataSnapClient;DataSnapCommon;DataSnapServer;DataSnapProviderClient;DBXSybaseASEDriver;dxRibbonRS17;DbxCommonDriver;VCL_FlexCel_Components;vclimg;cxDataRS17;dxServerModeRS17;dbxcds;cxBarEditItemRS17;DatasnapConnectorsFreePascal;cxPivotGridOLAPRS17;vcldb;cxExportRS17;vcldsnap;dxBarExtItemsRS17;dacvcl170;cxVerticalGridRS17;DBXDb2Driver;dxNavBarRS17;DBXOracleDriver;CustomIPTransport;cxGridRS17;dsnap;IndyIPServer;unidac170;fmxase;vcl;IndyCore;IndyIPCommon;DBXMSSQLDriver;FMX_FlexCel_Core;inetdbxpress;webdsnap;dxWizardControlRS17;unidacfmx170;adortl;dxtrmdRS17;bindcompfmx;XlsxAdapterXE3;rtl;dbrtl;DbxClientDriver;dxTabbedMDIRS17;bindcomp;inetdb;liteprovider170;dxBarRS17;Tee;dxdbtrRS17;DBXOdbcDriver;dxBarDBNavRS17;FlexCel_Render;xmlrtl;ibxpress;dxorgcRS17;IndyProtocols;DBXMySQLDriver;dxLayoutControlRS17;dxDockingRS17;vclactnband;bindengine;soaprtl;bindcompdbx;TeeUI;bindcompvcl;VCL_FlexCel_Core;FlexCel_Pdf;vclie;dxBarExtDBItemsRS17;FMX_FlexCel_Components;cxPageControlRS17;vcltouch;websnap;dxTileControlRS17;VclSmp;dxmdsRS17;DBXInformixDriver;cxPivotGridRS17;DataSnapConnectors;dxdborRS17;FlexCelXE3;dsnapcon;DBXFirebirdDriver;inet;dacfmx170;fmxobj;cxTreeListRS17;unidacvcl170;vclx;cxEditorsRS17;DBXSybaseASADriver;fmxdae;FlexCel_XlsAdapter;crcontrols170;dbexpress;DataSnapIndy10ServerTransport;$(DCC_UsePackage)</DCC_UsePackage>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_1)'!=''">
+        <DCC_Define>DEBUG;$(DCC_Define)</DCC_Define>
+        <DCC_DebugDCUs>true</DCC_DebugDCUs>
+        <DCC_Optimize>false</DCC_Optimize>
+        <DCC_GenerateStackFrames>true</DCC_GenerateStackFrames>
+        <DCC_DebugInfoInExe>true</DCC_DebugInfoInExe>
+        <DCC_RemoteDebug>true</DCC_RemoteDebug>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_1_Win32)'!=''">
+        <DCC_RemoteDebug>false</DCC_RemoteDebug>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_2)'!=''">
+        <DCC_LocalDebugSymbols>false</DCC_LocalDebugSymbols>
+        <DCC_Define>RELEASE;$(DCC_Define)</DCC_Define>
+        <DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
+        <DCC_DebugInformation>false</DCC_DebugInformation>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_2_Win32)'!=''">
+        <Manifest_File>$(BDS)\bin\default_app.manifest</Manifest_File>
+        <DCC_ExeOutput>D:\Work\Releases\FastEditor\</DCC_ExeOutput>
+        <Icon_MainIcon>FastEditor_Icon.ico</Icon_MainIcon>
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+        <VerInfo_Locale>1033</VerInfo_Locale>
+    </PropertyGroup>
+    <ItemGroup>
+        <DelphiCompile Include="$(MainSource)">
+            <MainSource>MainSource</MainSource>
+        </DelphiCompile>
+        <DCCReference Include="FastEditorMain.pas">
+            <Form>FastEditorFrm</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <BuildConfiguration Include="Release">
+            <Key>Cfg_2</Key>
+            <CfgParent>Base</CfgParent>
+        </BuildConfiguration>
+        <BuildConfiguration Include="Base">
+            <Key>Base</Key>
+        </BuildConfiguration>
+        <BuildConfiguration Include="Debug">
+            <Key>Cfg_1</Key>
+            <CfgParent>Base</CfgParent>
+        </BuildConfiguration>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Delphi.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Delphi.Personality>
+                <VersionInfo>
+                    <VersionInfo Name="IncludeVerInfo">False</VersionInfo>
+                    <VersionInfo Name="AutoIncBuild">False</VersionInfo>
+                    <VersionInfo Name="MajorVer">1</VersionInfo>
+                    <VersionInfo Name="MinorVer">0</VersionInfo>
+                    <VersionInfo Name="Release">0</VersionInfo>
+                    <VersionInfo Name="Build">0</VersionInfo>
+                    <VersionInfo Name="Debug">False</VersionInfo>
+                    <VersionInfo Name="PreRelease">False</VersionInfo>
+                    <VersionInfo Name="Special">False</VersionInfo>
+                    <VersionInfo Name="Private">False</VersionInfo>
+                    <VersionInfo Name="DLL">False</VersionInfo>
+                    <VersionInfo Name="Locale">1049</VersionInfo>
+                    <VersionInfo Name="CodePage">1251</VersionInfo>
+                </VersionInfo>
+                <VersionInfoKeys>
+                    <VersionInfoKeys Name="CompanyName"/>
+                    <VersionInfoKeys Name="FileDescription"/>
+                    <VersionInfoKeys Name="FileVersion">1.0.0.0</VersionInfoKeys>
+                    <VersionInfoKeys Name="InternalName"/>
+                    <VersionInfoKeys Name="LegalCopyright"/>
+                    <VersionInfoKeys Name="LegalTrademarks"/>
+                    <VersionInfoKeys Name="OriginalFilename"/>
+                    <VersionInfoKeys Name="ProductName"/>
+                    <VersionInfoKeys Name="ProductVersion">1.0.0.0</VersionInfoKeys>
+                    <VersionInfoKeys Name="Comments"/>
+                    <VersionInfoKeys Name="CFBundleName"/>
+                    <VersionInfoKeys Name="CFBundleDisplayName"/>
+                    <VersionInfoKeys Name="CFBundleIdentifier"/>
+                    <VersionInfoKeys Name="CFBundleVersion"/>
+                    <VersionInfoKeys Name="CFBundlePackageType"/>
+                    <VersionInfoKeys Name="CFBundleSignature"/>
+                    <VersionInfoKeys Name="CFBundleAllowMixedLocalizations"/>
+                    <VersionInfoKeys Name="CFBundleExecutable"/>
+                </VersionInfoKeys>
+                <Source>
+                    <Source Name="MainSource">FastEditor.dpr</Source>
+                </Source>
+                <Excluded_Packages>
+                    <Excluded_Packages Name="$(BDS)\Bpl\frxTee17.bpl">(untitled)</Excluded_Packages>
+                </Excluded_Packages>
+            </Delphi.Personality>
+            <Deployment/>
+            <Platforms>
+                <Platform value="Win32">True</Platform>
+                <Platform value="Win64">False</Platform>
+            </Platforms>
+        </BorlandProject>
+        <ProjectFileVersion>12</ProjectFileVersion>
+    </ProjectExtensions>
+    <Import Project="$(BDS)\Bin\CodeGear.Delphi.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Delphi.Targets')"/>
+    <Import Project="$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj" Condition="Exists('$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj')"/>
+</Project>
